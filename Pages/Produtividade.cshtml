@@ -1,0 +1,231 @@
+﻿@page
+@model ProdutividadeModel
+@{
+    ViewData["Title"] = "Produtividade - Separação e Conferência";
+}
+
+<h1 class="mt-4">Painel de Produtividade</h1>
+
+<div class="card my-4">
+    <div class="card-header">
+        Filtro
+    </div>
+    <div class="card-body">
+        <form method="get">
+            <div class="row">
+                <div class="col-md-5">
+                    <label for="DataInicio">Data inicial:</label>
+                    <input type="date" class="form-control" asp-for="DataInicio" />
+                </div>
+                <div class="col-md-5">
+                    <label for="DataFim">Data final:</label>
+                    <input type="date" class="form-control" asp-for="DataFim" />
+                </div>
+                <div class="col-md-2 d-flex align-items-end">
+                    <button type="submit" class="btn btn-primary w-100">Filtrar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                Gráfico de Separação (Apanhas por Funcionário)
+            </div>
+            <div class="card-body">
+                <canvas id="graficoSeparacao"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">
+                Gráfico de Conferência (Apanhas por Funcionário)
+            </div>
+            <div class="card-body">
+                <canvas id="graficoConferencia"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+
+    <div class="col-lg-6">
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h3 class="h5 mb-0">Produtividade de Separação</h3>
+            </div>
+            <div class="card-body">
+                @if (Model.DadosSeparacao != null && Model.DadosSeparacao.Any())
+                {
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Funcionário</th>
+                                    <th>Qtd. OS</th>
+                                    <th>Apanhas</th>
+                                    <th>Volume</th>
+                                    <th>Valor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.DadosSeparacao)
+                                {
+                                    if (item.NomeFuncionario == null)
+                                    {
+                                        <tr class="table-info font-weight-bold">
+                                            <td>TOTAL</td>
+                                            <td>@item.QuantidadeOS</td>
+                                            <td>@item.Apanhas</td>
+                                            <td>@item.Volume</td>
+                                            <td>@string.Format("{0:C}", item.Valor)</td>
+                                        </tr>
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <td>@item.NomeFuncionario</td>
+                                            <td>@item.QuantidadeOS</td>
+                                            <td>@item.Apanhas</td>
+                                            <td>@item.Volume</td>
+                                            <td>@string.Format("{0:C}", item.Valor)</td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+                else
+                {
+                    <p>Nenhum dado de separação encontrado para o período selecionado.</p>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">
+                <h3 class="h5 mb-0">Produtividade de Conferência</h3>
+            </div>
+            <div class="card-body">
+                @if (Model.DadosConferencia != null && Model.DadosConferencia.Any())
+                {
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Funcionário</th>
+                                    <th>Qtd. OS</th>
+                                    <th>Apanhas</th>
+                                    <th>Volume</th>
+                                    <th>Valor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.DadosConferencia)
+                                {
+                                    if (item.NomeFuncionario == null)
+                                    {
+                                        <tr class="table-info font-weight-bold">
+                                            <td>TOTAL</td>
+                                            <td>@item.QuantidadeOS</td>
+                                            <td>@item.Apanhas</td>
+                                            <td>@item.Volume</td>
+                                            <td>@string.Format("{0:C}", item.Valor)</td>
+                                        </tr>
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <td>@item.NomeFuncionario</td>
+                                            <td>@item.QuantidadeOS</td>
+                                            <td>@item.Apanhas</td>
+                                            <td>@item.Volume</td>
+                                            <td>@string.Format("{0:C}", item.Valor)</td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+                else
+                {
+                    <p>Nenhum dado de conferência encontrado para o período selecionado.</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Prepara os dados para o Gráfico de Separação
+            var separacaoDataRaw = @Html.Raw(Json.Serialize(Model.DadosSeparacao));
+            var separacaoData = separacaoDataRaw.filter(item => item.nomeFuncionario !== null);
+            var separacaoLabels = separacaoData.map(item => item.nomeFuncionario);
+            var separacaoValores = separacaoData.map(item => item.apanhas);
+
+            var ctxSeparacao = document.getElementById('graficoSeparacao').getContext('2d');
+            var graficoSeparacao = new Chart(ctxSeparacao, {
+                type: 'bar',
+                data: {
+                    labels: separacaoLabels,
+                    datasets: [{
+                        label: 'Apanhas x Separação',
+                        data: separacaoValores,
+                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Prepara os dados para o Gráfico de Conferência
+            var conferenciaDataRaw = @Html.Raw(Json.Serialize(Model.DadosConferencia));
+            var conferenciaData = conferenciaDataRaw.filter(item => item.nomeFuncionario !== null);
+            var conferenciaLabels = conferenciaData.map(item => item.nomeFuncionario);
+            var conferenciaValores = conferenciaData.map(item => item.apanhas);
+
+            var ctxConferencia = document.getElementById('graficoConferencia').getContext('2d');
+            var graficoConferencia = new Chart(ctxConferencia, {
+                type: 'bar',
+                data: {
+                    labels: conferenciaLabels,
+                    datasets: [{
+                        label: 'Apanhas x Conferência',
+                        data: conferenciaValores,
+                        backgroundColor: 'rgba(75, 192, 192, 0.5)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+}

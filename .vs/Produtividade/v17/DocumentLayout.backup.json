@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\logistica2\\Desktop\\Desenvolvimento\\Produtividade\\Produtividade\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DE99AD26-4B45-4E87-AC9C-112905182D15}|Produtividade.csproj|c:\\users\\logistica2\\desktop\\desenvolvimento\\produtividade\\produtividade\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE99AD26-4B45-4E87-AC9C-112905182D15}|Produtividade.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE99AD26-4B45-4E87-AC9C-112905182D15}|Produtividade.csproj|c:\\users\\logistica2\\desktop\\desenvolvimento\\produtividade\\produtividade\\pages\\produtividade.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE99AD26-4B45-4E87-AC9C-112905182D15}|Produtividade.csproj|solutionrelative:pages\\produtividade.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE99AD26-4B45-4E87-AC9C-112905182D15}|Produtividade.csproj|c:\\users\\logistica2\\desktop\\desenvolvimento\\produtividade\\produtividade\\pages\\produtividade.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE99AD26-4B45-4E87-AC9C-112905182D15}|Produtividade.csproj|solutionrelative:pages\\produtividade.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE99AD26-4B45-4E87-AC9C-112905182D15}|Produtividade.csproj|c:\\users\\logistica2\\desktop\\desenvolvimento\\produtividade\\produtividade\\services\\produtividadeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE99AD26-4B45-4E87-AC9C-112905182D15}|Produtividade.csproj|solutionrelative:services\\produtividadeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE99AD26-4B45-4E87-AC9C-112905182D15}|Produtividade.csproj|c:\\users\\logistica2\\desktop\\desenvolvimento\\produtividade\\produtividade\\models\\produtividadeconferencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE99AD26-4B45-4E87-AC9C-112905182D15}|Produtividade.csproj|solutionrelative:models\\produtividadeconferencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE99AD26-4B45-4E87-AC9C-112905182D15}|Produtividade.csproj|c:\\users\\logistica2\\desktop\\desenvolvimento\\produtividade\\produtividade\\models\\produtividadeseparacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE99AD26-4B45-4E87-AC9C-112905182D15}|Produtividade.csproj|solutionrelative:models\\produtividadeseparacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\logistica2\\Desktop\\Desenvolvimento\\Produtividade\\Produtividade\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\logistica2\\Desktop\\Desenvolvimento\\Produtividade\\Produtividade\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T14:58:14.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Produtividade.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\logistica2\\Desktop\\Desenvolvimento\\Produtividade\\Produtividade\\Pages\\Produtividade.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Produtividade.cshtml.cs",
+              "ToolTip": "C:\\Users\\logistica2\\Desktop\\Desenvolvimento\\Produtividade\\Produtividade\\Pages\\Produtividade.cshtml.cs",
+              "RelativeToolTip": "Pages\\Produtividade.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T14:56:44.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Produtividade.cshtml",
+              "DocumentMoniker": "C:\\Users\\logistica2\\Desktop\\Desenvolvimento\\Produtividade\\Produtividade\\Pages\\Produtividade.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Produtividade.cshtml",
+              "ToolTip": "C:\\Users\\logistica2\\Desktop\\Desenvolvimento\\Produtividade\\Produtividade\\Pages\\Produtividade.cshtml",
+              "RelativeToolTip": "Pages\\Produtividade.cshtml",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAwwOcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-05T14:54:44.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProdutividadeService.cs",
+              "DocumentMoniker": "C:\\Users\\logistica2\\Desktop\\Desenvolvimento\\Produtividade\\Produtividade\\Services\\ProdutividadeService.cs",
+              "RelativeDocumentMoniker": "Services\\ProdutividadeService.cs",
+              "ToolTip": "C:\\Users\\logistica2\\Desktop\\Desenvolvimento\\Produtividade\\Produtividade\\Services\\ProdutividadeService.cs",
+              "RelativeToolTip": "Services\\ProdutividadeService.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAMwIQAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T14:49:15.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProdutividadeConferencia.cs",
+              "DocumentMoniker": "C:\\Users\\logistica2\\Desktop\\Desenvolvimento\\Produtividade\\Produtividade\\Models\\ProdutividadeConferencia.cs",
+              "RelativeDocumentMoniker": "Models\\ProdutividadeConferencia.cs",
+              "ToolTip": "C:\\Users\\logistica2\\Desktop\\Desenvolvimento\\Produtividade\\Produtividade\\Models\\ProdutividadeConferencia.cs",
+              "RelativeToolTip": "Models\\ProdutividadeConferencia.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T14:42:18.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProdutividadeSeparacao.cs",
+              "DocumentMoniker": "C:\\Users\\logistica2\\Desktop\\Desenvolvimento\\Produtividade\\Produtividade\\Models\\ProdutividadeSeparacao.cs",
+              "RelativeDocumentMoniker": "Models\\ProdutividadeSeparacao.cs",
+              "ToolTip": "C:\\Users\\logistica2\\Desktop\\Desenvolvimento\\Produtividade\\Produtividade\\Models\\ProdutividadeSeparacao.cs",
+              "RelativeToolTip": "Models\\ProdutividadeSeparacao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T14:41:30.553Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
